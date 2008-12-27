@@ -1,6 +1,6 @@
 <%@   page   contentType="text/html;   charset=gb2312"   language="java"%>  
 <%@page pageEncoding="GB2312"%>
-
+<%@include file="head.jsp"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 	<head>
@@ -75,10 +75,13 @@ textarea{color:#666;font:normal 12px/1.6em Verdana,Arial,sans-serif,"宋体";}
 
 	<body style="margin: 100px 150px; background-image: url('../images/background2.png');">
 		<center>
-		
-			<table width="900" border="0" align="center" cellpadding="0"
-				cellspacing="0" >
-				</table>
+		<%
+		java.util.Date articleDate = new java.util.Date();//得到当前系统时间 
+		out.println(articleDate);
+//		String str_date1 = formatter.format(currentTime); //将日期时间格式化 
+//		out.println(str_date1);
+		String str_date2 = articleDate.toString(); //将Date型日期时间转换成字符串形式 
+		out.println(str_date2); %>
 			
 			
 			<table width="900" border="0" align="center" cellpadding="0"
@@ -94,8 +97,8 @@ textarea{color:#666;font:normal 12px/1.6em Verdana,Arial,sans-serif,"宋体";}
 				</tr>
 				<tr>
 					<td height="6" style="height: 1px">
-					<form method="post" action="">
-					</form>
+					
+					
 					</td>
 				</tr>
 				<tr>
@@ -103,11 +106,12 @@ textarea{color:#666;font:normal 12px/1.6em Verdana,Arial,sans-serif,"宋体";}
 				</tr>
 				<tr>
 					<td style="height: 6px">
+			<form method="post" action="/blog/servlet/StoreArticle">		
       <table class="tableForm" width="100%" border="0" cellpadding="0" cellspacing="8">
         <tr>
           <td class="style2" width="80">日志标题：</td>
           <td class="style3">
-			<input type="text" name="artiletitle" size="100" value="" id="entrytitle" class="text" title="entrytitle" style="height: 22px">&nbsp;
+			<input type="text" name="articleTitle" size="100" value="" id="entrytitle" class="text" title="entrytitle" style="height: 22px">&nbsp;
 
           </td>
         </tr>
@@ -152,6 +156,11 @@ textarea{color:#666;font:normal 12px/1.6em Verdana,Arial,sans-serif,"宋体";}
           <td valign="top" class="redfont" colspan="2"> 日志内容 </td>
 		</tr>-->
 		<tr>
+			<td>
+				<input type="hidden" value=<%=articleDate %> name="articleDate" >
+			</td>
+		</tr>
+		<tr>
           <td class="style2" width="80">日志：</td>
           <td class="style3">&nbsp;
 
@@ -159,7 +168,7 @@ textarea{color:#666;font:normal 12px/1.6em Verdana,Arial,sans-serif,"宋体";}
         	</tr>
 		<tr>
           <td colspan="2">		
-				<input type="text" name="articleContent" size="100" value="" id="entrytitle0" class="text" title="entrytitle" style="height: 269px; width: 871px"></td>
+				<textarea name="articleContent" cols="120" rows="20" align="center"></textarea></td>
         </tr>
 	
         	
@@ -183,6 +192,7 @@ textarea{color:#666;font:normal 12px/1.6em Verdana,Arial,sans-serif,"宋体";}
 
 					</td>
 				</tr>
+			</form>
 				<tr>
 					<td height="6" style="height: 1px"></td>
 				</tr>

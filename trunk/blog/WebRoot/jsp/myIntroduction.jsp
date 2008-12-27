@@ -1,6 +1,6 @@
 <%@   page   contentType="text/html;   charset=gb2312"   language="java"%>  
 <%@page pageEncoding="GB2312"%>
-
+<%@include file="head.jsp"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 	<head>
