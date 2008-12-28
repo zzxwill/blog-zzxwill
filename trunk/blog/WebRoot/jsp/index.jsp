@@ -134,7 +134,7 @@ h3 {
 							</tr>
 							<td valign='top' 
 						background='/labmanagement/images/ibg.gif' class="style8" style="width: 191px" >
-						<form action="result.html" id="cse-search-box">
+						<form action="result.jsp" id="cse-search-box">
   <div>
     <input type="hidden" name="cx" value="017029014597262503773:85rymztj_-c" />
     <input type="hidden" name="cof" value="FORID:9" />
@@ -183,7 +183,7 @@ h3 {
 							</tr>
 							<tr>
 								<td class="style13">&nbsp;<img src="../images/ico_write.gif" width="16" height="16"><a href="writeArticle.jsp">撰写新日志</a> 
-								| 管理</td>
+								|<a href="manageArticle.jsp">管理</a></td>
 							</tr>
 							<tr>
 								<td>&nbsp;</td>

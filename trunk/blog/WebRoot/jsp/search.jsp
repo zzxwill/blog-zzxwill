@@ -45,6 +45,12 @@ h3 {
 </style>
 </head>
 
+<!--  这三行实现的是自动提表-->
+<script language=javascript> 
+setTimeout("document.search.submit()",1000000) 
+</script> 
+<!--这三行实现的是自动提表-->
+
 	<body style="margin: 100px 150px; background-image: url('../images/background2.png');">
 		<center>
 		
@@ -62,16 +68,20 @@ h3 {
 					<td height="6" style="height: 1px"></td>
 				</tr>
 				<tr>
-					<td height="6" style="height: 1px"><form action="result.html" id="cse-search-box">
+					<td height="6" style="height: 1px">
+
+<!-- 这个form实现的是对我的博客的search. -->					
+					<form name="search" action="result.jsp" id="cse-search-box" target="_blank">
   <div>
     <input type="hidden" name="cx" value="017029014597262503773:85rymztj_-c" />
     <input type="hidden" name="cof" value="FORID:9" />
     <input type="hidden" name="ie" value="UTF-8" />
-    <input type="text" name="q" size="31" />
+    <input type="text" name="q" size="31" value="zzxwill.blog.sohu.com"/>
     <input type="submit" name="sa" value="搜索" />
   </div>
 </form>
 <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=zh-Hans"></script>
+<!-- 这个form实现的是对我的博客的search. -->	
 </td>
 				</tr>
 				<tr>

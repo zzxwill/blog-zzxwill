@@ -97,9 +97,9 @@ public class StoreArticle extends HttpServlet {
 		out.println("  <BODY>");
 //		out.print("测试2");
 		String articleTitle=request.getParameter("articleTitle");
-		out.println(request.getParameter("articleTitle"));
+//		out.println(request.getParameter("articleTitle"));
 		String articleContent=request.getParameter("articleContent");
-		out.println(request.getParameter("articleContent"));
+//		out.println(request.getParameter("articleContent"));
 		
 //		out.println(request.getParameter("articleDate"));
 //		out.println(request.getParameterValues("articleContent"));
@@ -108,9 +108,9 @@ public class StoreArticle extends HttpServlet {
 		java.util.Date currentTime = new java.util.Date();//得到当前系统时间 
 //		out.println("currentTime"+currentTime);
 		String articleDate = formatter.format(currentTime); //将日期时间格式化 
-		out.println(articleDate);
+//		out.println(articleDate);
 		String str_date2 = articleDate.toString(); //将Date型日期时间转换成字符串形式 
-		out.println(str_date2);
+//		out.println(str_date2);
 		
 		try{
 			Connection conn=null;
@@ -119,15 +119,15 @@ public class StoreArticle extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			conn=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=GB2312","root","zzxwill");
 			stmt=(Statement)conn.createStatement();
-			res=stmt.executeQuery("select count(*) from article");
-			int articleID=0;
-			while(res.next()){
-				articleID=res.getInt(1);
-				
-			}
-			articleID++;
-			System.out.print("articleID: "+articleID);
-			int num=stmt.executeUpdate("insert into article values('"+articleID+"','"+articleTitle+"','"+articleContent+"','"+str_date2+"');");
+//			res=stmt.executeQuery("select count(*) from article");
+//			int articleID=0;
+//			while(res.next()){
+//				articleID=res.getInt(1);
+//				
+//			}
+//			articleID++;
+//			System.out.print("articleID: "+articleID);
+			int num=stmt.executeUpdate("insert into article(articleTitle,articleContent,articleDate) values('"+articleTitle+"','"+articleContent+"','"+str_date2+"');");
 			
 			if(num==1){
 				out.print("成功发表日志");
