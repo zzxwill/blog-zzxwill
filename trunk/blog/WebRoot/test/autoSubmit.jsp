@@ -6,17 +6,13 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312"> 
 </head> 
-<script language=javascript> 
-setTimeout("document.form1.submit()",4000) 
-</script> 
+
 <body bgcolor="#FFFFFF" text="#000000"> 
-<form name="form1" method="post" action="pp.jsp"> 
-　<p> 
-　　<input type="text" name="textfield" value="zzxwill"> 
-　</p> 
-　<p> 
-　　<input type="text" name="textfield2"> 
-　</p> 
-</form> 
+
+
+<input   name="maths"   type="checkbox"   id="secret"   value="on">数学   
+  <input   name="English"   type="checkbox"   id="secret"   value="on">英语   
+
+
 </body> 
 </html> 
