@@ -11,7 +11,7 @@
 </style>
 	</head>
 
-	<body>
+	<body style="margin: 100px 150px; background-image: url('../images/background2.png');">
 	
 		<table width="600" border="0" align="center" cellpadding="0"
 				cellspacing="0" class="tbspan" style="height: 19px">
